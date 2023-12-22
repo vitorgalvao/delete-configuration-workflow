@@ -33,23 +33,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>addfilestobuffer</key>
-				<true/>
-				<key>clearbuffer</key>
-				<false/>
-				<key>outputtype</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.buffer</string>
-			<key>uid</key>
-			<string>B3365B16-C7E7-4945-9D16-CB80E147FF94</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -95,6 +78,23 @@
 			<string>B83A82D4-539A-4EB8-A370-BAC12EB3E258</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<true/>
+				<key>clearbuffer</key>
+				<false/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.buffer</string>
+			<key>uid</key>
+			<string>B3365B16-C7E7-4945-9D16-CB80E147FF94</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
