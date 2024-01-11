@@ -6,6 +6,10 @@ Find settings and preferences to delete
 
 ## Usage
 
-Find files and folders in `~/Library` via the `dconf` keyword. <kbd>↩&#xFE0E;</kbd> to add to the File Buffer.
+Find files and folders in `~/Library` via the `dconf` keyword.
 
 ![Alfred search for dconf apple.chess](Workflow/images/about/dconf.png)
+
+* <kbd>↩&#xFE0E;</kbd>: Delete path.
+* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd>: Ignore path during this run.
+* <kbd>⇧</kbd><kbd>↩&#xFE0E;</kbd>: Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).
