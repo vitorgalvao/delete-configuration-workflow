@@ -28,6 +28,7 @@ guard resultCount > 0 else {
 
 // Prepare items
 struct ScriptFilterItem: Codable {
+  let variables: [String: String]
   let uid: String
   let title: String
   let subtitle: String
@@ -51,6 +52,7 @@ let sfItems: [ScriptFilterItem] = (0..<resultCount).compactMap { resultIndex in
   else { return nil }
 
   return ScriptFilterItem(
+    variables: ["search_query": query],
     uid: resultPath,
     title: URL(fileURLWithPath: resultPath).lastPathComponent,
     subtitle: (resultPath as NSString).abbreviatingWithTildeInPath,

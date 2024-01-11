@@ -6,17 +6,115 @@
 	<string>com.vitorgalvao.alfred.deleteconfiguration</string>
 	<key>connections</key>
 	<dict>
+		<key>51DC7912-30C9-4601-AFD9-448E72C2EE46</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B83A82D4-539A-4EB8-A370-BAC12EB3E258</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5F85F6C9-3F65-4DC5-8168-2614870BE21B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5F85F6C9-3F65-4DC5-8168-2614870BE21B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>68734535-F1AF-4FB4-A688-81680F82D91B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>51DC7912-30C9-4601-AFD9-448E72C2EE46</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B83A82D4-539A-4EB8-A370-BAC12EB3E258</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B3365B16-C7E7-4945-9D16-CB80E147FF94</string>
+				<string>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Add to File Buffer</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Ignore during this run</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -30,6 +128,23 @@
 	<string>Delete Configuration</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<true/>
+				<key>clearbuffer</key>
+				<false/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.buffer</string>
+			<key>uid</key>
+			<string>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -82,17 +197,125 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>addfilestobuffer</key>
-				<true/>
-				<key>clearbuffer</key>
-				<false/>
-				<key>outputtype</key>
-				<integer>0</integer>
+				<key>tasksettings</key>
+				<dict/>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.buffer</string>
+			<string>alfred.workflow.automation.task</string>
 			<key>uid</key>
-			<string>B3365B16-C7E7-4945-9D16-CB80E147FF94</string>
+			<string>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>show_list</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>show_list</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>68734535-F1AF-4FB4-A688-81680F82D91B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:search_query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>51DC7912-30C9-4601-AFD9-448E72C2EE46</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:ignored_suffixes}
+{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5F85F6C9-3F65-4DC5-8168-2614870BE21B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>^/Users/.+?/Library/</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>ignored_suffixes</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -100,24 +323,81 @@
 	<key>readme</key>
 	<string>## Usage
 
-Find files and folders in `~/Library` via the `dconf` keyword. &lt;kbd&gt;↩&lt;/kbd&gt; to add to the File Buffer.
+Find files and folders in `~/Library` via the `dconf` keyword.
 
-![Alfred search for dconf apple.chess](images/about/dconf.png)</string>
+![Alfred search for dconf apple.chess](images/about/dconf.png)
+
+* &lt;kbd&gt;↩&lt;/kbd&gt;: Delete path.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Ignore path during this run.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).</string>
 	<key>uidata</key>
 	<dict>
-		<key>B3365B16-C7E7-4945-9D16-CB80E147FF94</key>
+		<key>51DC7912-30C9-4601-AFD9-448E72C2EE46</key>
 		<dict>
 			<key>xpos</key>
-			<real>240</real>
+			<real>205</real>
 			<key>ypos</key>
-			<real>30</real>
+			<real>205</real>
+		</dict>
+		<key>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</key>
+		<dict>
+			<key>xpos</key>
+			<real>505</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
+		<key>5F85F6C9-3F65-4DC5-8168-2614870BE21B</key>
+		<dict>
+			<key>note</key>
+			<string>Append to ignore list</string>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
+		<key>68734535-F1AF-4FB4-A688-81680F82D91B</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>7B6CBC76-42FB-4A69-A006-359A323156FB</key>
+		<dict>
+			<key>xpos</key>
+			<real>805</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</key>
+		<dict>
+			<key>xpos</key>
+			<real>465</real>
+			<key>ypos</key>
+			<real>175</real>
 		</dict>
 		<key>B83A82D4-539A-4EB8-A370-BAC12EB3E258</key>
 		<dict>
 			<key>xpos</key>
-			<real>40</real>
+			<real>275</real>
 			<key>ypos</key>
-			<real>30</real>
+			<real>175</real>
+		</dict>
+		<key>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</key>
+		<dict>
+			<key>xpos</key>
+			<real>465</real>
+			<key>ypos</key>
+			<real>45</real>
+		</dict>
+		<key>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</key>
+		<dict>
+			<key>note</key>
+			<string>Override ignore list</string>
+			<key>xpos</key>
+			<real>715</real>
+			<key>ypos</key>
+			<real>325</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
