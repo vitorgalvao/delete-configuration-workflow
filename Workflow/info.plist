@@ -327,9 +327,9 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 
 ![Alfred search for dconf apple.chess](images/about/dconf.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt;: Delete path.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Ignore path during this run.
-* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).</string>
+* &lt;kbd&gt;↩&lt;/kbd&gt; Delete path.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Ignore path during this run.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).</string>
 	<key>uidata</key>
 	<dict>
 		<key>51DC7912-30C9-4601-AFD9-448E72C2EE46</key>
