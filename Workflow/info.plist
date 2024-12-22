@@ -6,11 +6,11 @@
 	<string>com.vitorgalvao.alfred.deleteconfiguration</string>
 	<key>connections</key>
 	<dict>
-		<key>51DC7912-30C9-4601-AFD9-448E72C2EE46</key>
+		<key>0E6A83E9-2BAF-4F92-A788-D39A8D600109</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B83A82D4-539A-4EB8-A370-BAC12EB3E258</string>
+				<string>F1342DD6-92FC-4D4A-B33A-8F5229D8FE51</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -19,11 +19,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</key>
+		<key>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5F85F6C9-3F65-4DC5-8168-2614870BE21B</string>
+				<string>7590D982-5C40-47E6-8256-4310E2B40357</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -32,11 +32,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>5F85F6C9-3F65-4DC5-8168-2614870BE21B</key>
+		<key>2CD62962-E471-429A-84C7-6945B4A31D06</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</string>
+				<string>7C37F02E-9845-47DF-B88A-DE1E12976EA7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -45,11 +45,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>68734535-F1AF-4FB4-A688-81680F82D91B</key>
+		<key>5EB6BD35-3ECE-4879-A01C-F1ECF961F3DE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>51DC7912-30C9-4601-AFD9-448E72C2EE46</string>
+				<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -58,7 +58,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</key>
+		<key>66592D86-DB05-4739-884B-F8E099D61FC8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -71,50 +71,85 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B83A82D4-539A-4EB8-A370-BAC12EB3E258</key>
+		<key>7590D982-5C40-47E6-8256-4310E2B40357</key>
+		<array/>
+		<key>7C37F02E-9845-47DF-B88A-DE1E12976EA7</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</string>
+				<string>66592D86-DB05-4739-884B-F8E099D61FC8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9AB0C808-7289-4F83-8846-901A1CEEFCFE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7590D982-5C40-47E6-8256-4310E2B40357</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D913927B-38F8-466C-8721-84BE0BE60388</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5EB6BD35-3ECE-4879-A01C-F1ECF961F3DE</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Ignore during this run</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Trash paths in File Buffer</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>Add to File Buffer</string>
 				<key>vitoclose</key>
 				<true/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Ignore during this run</string>
-				<key>vitoclose</key>
-				<true/>
-			</dict>
-		</array>
-		<key>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -129,87 +164,60 @@
 	<key>objects</key>
 	<array>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>addfilestobuffer</key>
-				<true/>
-				<key>clearbuffer</key>
-				<false/>
-				<key>outputtype</key>
-				<integer>0</integer>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.buffer</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</string>
+			<string>5EB6BD35-3ECE-4879-A01C-F1ECF961F3DE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>concurrently</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
 				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>{var:search_keyword}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>Searching…</string>
+				<integer>68</integer>
 				<key>script</key>
-				<string></string>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function isNotDir(pathString) {
+  return $.NSFileManager.defaultManager
+    .attributesOfItemAtPathError(pathString, undefined)
+    .js["NSFileType"].js !== "NSFileTypeDirectory"
+}
+
+function run(argv) {
+  const deletedPaths = argv
+  const previousPaths = envVar("previous_paths").split("\n")
+
+  return deletedPaths.reduce((allPaths, currentPath) =&gt; {
+    // Remove deleted path
+    allPaths = allPaths.filter(path =&gt; path !== currentPath)
+    // Return early if not a directory
+    if (isNotDir(currentPath)) return allPaths
+    // Remove child paths
+    return allPaths.filter(path =&gt; !path.startsWith(`${currentPath}/`))
+  }, previousPaths).join("\n")
+}</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>mdlibrary</string>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string>{const:alfred_workflow_description}</string>
-				<key>title</key>
-				<string>{const:alfred_workflow_name}</string>
+				<string></string>
 				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
+				<integer>7</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B83A82D4-539A-4EB8-A370-BAC12EB3E258</string>
+			<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
 			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>tasksettings</key>
-				<dict/>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</string>
-			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -233,73 +241,160 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
+				<key>alfredfiltersresults</key>
 				<false/>
-				<key>triggerid</key>
-				<string>show_list</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>68734535-F1AF-4FB4-A688-81680F82D91B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:search_query}</string>
-				<key>passthroughargument</key>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
 				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>51DC7912-30C9-4601-AFD9-448E72C2EE46</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:ignored_suffixes}
-{query}</string>
-				<key>passthroughargument</key>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>{var:search_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
 				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>5F85F6C9-3F65-4DC5-8168-2614870BE21B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching “{query}”…</string>
+				<key>script</key>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function isNotDir(pathString) {
+  return $.NSFileManager.defaultManager
+    .attributesOfItemAtPathError(pathString, undefined)
+    .js["NSFileType"].js !== "NSFileTypeDirectory"
+}
+
+function runCommand(...arguments) {
+  const task = $.NSTask.alloc.init
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.fileURLWithPath("/usr/bin/env")
+  task.arguments = arguments
+  task.standardOutput = stdout
+  task.launchAndReturnError(false)
+
+  const dataOut = stdout.fileHandleForReading.readDataToEndOfFileAndReturnError(false)
+  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
+
+  return stringOut
+}
+
+function pathToItem(path) {
+  return {
+    uid: path,
+    title: $(path).lastPathComponent.js,
+    subtitle: $(path).stringByAbbreviatingWithTildeInPath.js,
+    arg: path,
+    type: "file",
+    icon: { path: path, type: "fileicon" }
+  }
+}
+
+function noResults(searchQuery) {
+  return JSON.stringify({ items: [{
+    title: "No Results",
+    subtitle: `No paths found matching “${searchQuery}”`,
+    valid: false
+  }]})
+}
+
+function run(argv) {
+  const searchQuery = argv[0]
+  const previousQuery = envVar("previous_query")
+  const previousPaths = envVar("previous_paths")
+
+  // If searching the same thing via External Trigger, return early with updated results
+  if (previousQuery === searchQuery) {
+console.log(previousPaths)
+console.log(previousPaths.length)
+    if (previousPaths.length === 0) return noResults(searchQuery)
+
+    return JSON.stringify({
+      variables: { previous_query: previousQuery, previous_paths: previousPaths },
+      items: previousPaths.split("\n").map(path =&gt; pathToItem(path))
+    })
+  }
+
+  // Find paths
+  const ignoredFlags = envVar("ignored_suffixes")
+    .split("\n")
+    .flatMap(suffix =&gt; ["--exclude", `${suffix}/*`])
+
+  const matchedPaths = runCommand("fd", searchQuery, ...ignoredFlags,
+    "--ignore-case", "--unrestricted", "--fixed-strings",
+    "--type", "file", "--type", "dir",
+    "--search-path", $("~/Library").stringByExpandingTildeInPath.js)
+    .split("\n")
+    .slice(0, -1) // Remove last (empty) item
+    .sort(isNotDir)
+
+  if (matchedPaths.length === 0) return noResults(searchQuery)
+
+  return JSON.stringify({
+    variables: { previous_query: searchQuery, previous_paths: matchedPaths.join("\n") },
+    items: matchedPaths.map(path =&gt; pathToItem(path))
+  })
+}</string>
+				<key>scriptargtype</key>
 				<integer>1</integer>
-				<key>matchstring</key>
-				<string>^/Users/.+?/Library/</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
+				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string>{const:alfred_workflow_description}</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+				<key>type</key>
+				<integer>7</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>custominputarg</key>
+				<string>{var:previous_query}</string>
+				<key>externalid</key>
+				<string>show_list</string>
+				<key>inputmode</key>
+				<integer>1</integer>
+				<key>usecustominputarg</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</string>
+			<string>D913927B-38F8-466C-8721-84BE0BE60388</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>7C37F02E-9845-47DF-B88A-DE1E12976EA7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -310,14 +405,92 @@
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>ignored_suffixes</key>
+					<key>previous_paths</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</string>
+			<string>66592D86-DB05-4739-884B-F8E099D61FC8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict/>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>7590D982-5C40-47E6-8256-4310E2B40357</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<false/>
+				<key>clearbuffer</key>
+				<true/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.buffer</string>
+			<key>uid</key>
+			<string>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>↓</string>
+				<key>keycode</key>
+				<integer>125</integer>
+				<key>keymod</key>
+				<integer>10485760</integer>
+				<key>overridewithargument</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>F1342DD6-92FC-4D4A-B33A-8F5229D8FE51</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<true/>
+				<key>clearbuffer</key>
+				<false/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.buffer</string>
+			<key>uid</key>
+			<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -327,79 +500,96 @@
 
 Find files and folders in `~/Library` via the `dconf` keyword.
 
-![Alfred search for dconf apple.chess](images/about/dconf.png)
+![Alfred search for dconf chess](images/about/dconf.png)
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Delete path.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Ignore path during this run.
-* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).</string>
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Ignore path during this run.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Add path to the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Trash paths in the [File Buffer](https://www.alfredapp.com/help/features/file-search/#file-buffer).</string>
 	<key>uidata</key>
 	<dict>
-		<key>51DC7912-30C9-4601-AFD9-448E72C2EE46</key>
+		<key>0E6A83E9-2BAF-4F92-A788-D39A8D600109</key>
 		<dict>
 			<key>xpos</key>
-			<real>205</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>205</real>
+			<real>435</real>
 		</dict>
-		<key>5D1ADCD4-BD96-4166-95EF-8034C96AF09F</key>
+		<key>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</key>
 		<dict>
 			<key>xpos</key>
-			<real>505</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>300</real>
 		</dict>
-		<key>5F85F6C9-3F65-4DC5-8168-2614870BE21B</key>
+		<key>2CD62962-E471-429A-84C7-6945B4A31D06</key>
 		<dict>
 			<key>note</key>
-			<string>Append to ignore list</string>
+			<string>Remove deleted path and child paths from results</string>
 			<key>xpos</key>
-			<real>595</real>
+			<real>590</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>130</real>
 		</dict>
-		<key>68734535-F1AF-4FB4-A688-81680F82D91B</key>
+		<key>5EB6BD35-3ECE-4879-A01C-F1ECF961F3DE</key>
 		<dict>
 			<key>xpos</key>
-			<real>50</real>
+			<real>375</real>
 			<key>ypos</key>
-			<real>175</real>
+			<real>90</real>
+		</dict>
+		<key>66592D86-DB05-4739-884B-F8E099D61FC8</key>
+		<dict>
+			<key>note</key>
+			<string>Update path list</string>
+			<key>xpos</key>
+			<real>895</real>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>7590D982-5C40-47E6-8256-4310E2B40357</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>300</real>
 		</dict>
 		<key>7B6CBC76-42FB-4A69-A006-359A323156FB</key>
 		<dict>
 			<key>xpos</key>
-			<real>805</real>
+			<real>990</real>
 			<key>ypos</key>
-			<real>175</real>
+			<real>130</real>
 		</dict>
-		<key>AFB1C03E-8477-43DD-AE53-6DAB169DCE3B</key>
-		<dict>
-			<key>xpos</key>
-			<real>465</real>
-			<key>ypos</key>
-			<real>175</real>
-		</dict>
-		<key>B83A82D4-539A-4EB8-A370-BAC12EB3E258</key>
-		<dict>
-			<key>xpos</key>
-			<real>275</real>
-			<key>ypos</key>
-			<real>175</real>
-		</dict>
-		<key>C4F2EF0C-DBAA-4ED8-A5B0-1901A0DEA110</key>
-		<dict>
-			<key>xpos</key>
-			<real>465</real>
-			<key>ypos</key>
-			<real>45</real>
-		</dict>
-		<key>F0EE3326-E18C-40BB-9327-0D3EC7B4AF4B</key>
+		<key>7C37F02E-9845-47DF-B88A-DE1E12976EA7</key>
 		<dict>
 			<key>note</key>
-			<string>Override ignore list</string>
+			<string>Trim whitespace</string>
 			<key>xpos</key>
-			<real>715</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>160</real>
+		</dict>
+		<key>9AB0C808-7289-4F83-8846-901A1CEEFCFE</key>
+		<dict>
+			<key>xpos</key>
+			<real>375</real>
+			<key>ypos</key>
+			<real>230</real>
+		</dict>
+		<key>D913927B-38F8-466C-8721-84BE0BE60388</key>
+		<dict>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>F1342DD6-92FC-4D4A-B33A-8F5229D8FE51</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>435</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -429,7 +619,10 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>Fonts
+				<string>Containers/com.apple.mail
+Fonts
+Mail
+Messages
 Mobile Documents</string>
 				<key>required</key>
 				<false/>
