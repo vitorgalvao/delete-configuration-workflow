@@ -23,6 +23,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>7590D982-5C40-47E6-8256-4310E2B40357</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -123,16 +133,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -140,6 +140,16 @@
 				<string>Trash paths in File Buffer</string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -168,73 +178,6 @@
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
 			<string>5EB6BD35-3ECE-4879-A01C-F1ECF961F3DE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>function envVar(varName) {
-  return $.NSProcessInfo
-    .processInfo
-    .environment
-    .objectForKey(varName).js
-}
-
-function isNotDir(pathString) {
-  return $.NSFileManager.defaultManager
-    .attributesOfItemAtPathError(pathString, undefined)
-    .js["NSFileType"].js !== "NSFileTypeDirectory"
-}
-
-function run(argv) {
-  const deletedPaths = argv
-  const previousPaths = envVar("previous_paths").split("\n")
-
-  return deletedPaths.reduce((allPaths, currentPath) =&gt; {
-    // Remove deleted path
-    allPaths = allPaths.filter(path =&gt; path !== currentPath)
-    // Return early if not a directory
-    if (isNotDir(currentPath)) return allPaths
-    // Remove child paths
-    return allPaths.filter(path =&gt; !path.startsWith(`${currentPath}/`))
-  }, previousPaths).join("\n")
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>show_list</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -320,8 +263,6 @@ function run(argv) {
 
   // If searching the same thing via External Trigger, return early with updated results
   if (previousQuery === searchQuery) {
-console.log(previousPaths)
-console.log(previousPaths.length)
     if (previousPaths.length === 0) return noResults(searchQuery)
 
     return JSON.stringify({
@@ -386,6 +327,73 @@ console.log(previousPaths.length)
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function isNotDir(pathString) {
+  return $.NSFileManager.defaultManager
+    .attributesOfItemAtPathError(pathString, undefined)
+    .js["NSFileType"].js !== "NSFileTypeDirectory"
+}
+
+function run(argv) {
+  const deletedPaths = argv
+  const previousPaths = envVar("previous_paths").split("\n")
+
+  return deletedPaths.reduce((allPaths, currentPath) =&gt; {
+    // Remove deleted path
+    allPaths = allPaths.filter(path =&gt; path !== currentPath)
+    // Return early if not a directory
+    if (isNotDir(currentPath)) return allPaths
+    // Remove child paths
+    return allPaths.filter(path =&gt; !path.startsWith(`${currentPath}/`))
+  }, previousPaths).join("\n")
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>show_list</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -417,10 +425,19 @@ console.log(previousPaths.length)
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<false/>
+				<key>clearbuffer</key>
+				<true/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
+			<string>alfred.workflow.action.buffer</string>
 			<key>uid</key>
-			<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
+			<string>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -440,19 +457,27 @@ console.log(previousPaths.length)
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>9AB0C808-7289-4F83-8846-901A1CEEFCFE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>addfilestobuffer</key>
-				<false/>
-				<key>clearbuffer</key>
 				<true/>
+				<key>clearbuffer</key>
+				<false/>
 				<key>outputtype</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.buffer</string>
 			<key>uid</key>
-			<string>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</string>
+			<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -477,23 +502,6 @@ console.log(previousPaths.length)
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>addfilestobuffer</key>
-				<true/>
-				<key>clearbuffer</key>
-				<false/>
-				<key>outputtype</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.buffer</string>
-			<key>uid</key>
-			<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Usage
@@ -513,14 +521,14 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 			<key>xpos</key>
 			<real>335</real>
 			<key>ypos</key>
-			<real>435</real>
+			<real>485</real>
 		</dict>
 		<key>1A243ACA-6ECA-4B5A-A47A-F2F671ADA1B4</key>
 		<dict>
 			<key>xpos</key>
 			<real>335</real>
 			<key>ypos</key>
-			<real>300</real>
+			<real>230</real>
 		</dict>
 		<key>2CD62962-E471-429A-84C7-6945B4A31D06</key>
 		<dict>
@@ -552,7 +560,7 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 			<key>xpos</key>
 			<real>590</real>
 			<key>ypos</key>
-			<real>300</real>
+			<real>340</real>
 		</dict>
 		<key>7B6CBC76-42FB-4A69-A006-359A323156FB</key>
 		<dict>
@@ -573,9 +581,9 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 		<key>9AB0C808-7289-4F83-8846-901A1CEEFCFE</key>
 		<dict>
 			<key>xpos</key>
-			<real>375</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>230</real>
+			<real>370</real>
 		</dict>
 		<key>D913927B-38F8-466C-8721-84BE0BE60388</key>
 		<dict>
@@ -589,7 +597,7 @@ Find files and folders in `~/Library` via the `dconf` keyword.
 			<key>xpos</key>
 			<real>590</real>
 			<key>ypos</key>
-			<real>435</real>
+			<real>485</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
