@@ -184,6 +184,73 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function isDir(pathString) {
+  return $.NSFileManager.defaultManager
+    .attributesOfItemAtPathError(pathString, undefined)
+    .js["NSFileType"].js === "NSFileTypeDirectory"
+}
+
+function run(argv) {
+  const deletedPaths = argv
+  const previousPaths = envVar("previous_paths").split("\n")
+
+  return deletedPaths.reduce((allPaths, currentPath) =&gt; {
+    // Remove deleted path
+    allPaths = allPaths.filter(path =&gt; path !== currentPath)
+    // Return early if not a directory
+    if (!isDir(currentPath)) return allPaths
+    // Remove child paths
+    return allPaths.filter(path =&gt; !path.startsWith(`${currentPath}/`))
+  }, previousPaths).join("\n")
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>show_list</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -216,10 +283,10 @@
     .objectForKey(varName).js
 }
 
-function isNotDir(pathString) {
+function isDir(pathString) {
   return $.NSFileManager.defaultManager
     .attributesOfItemAtPathError(pathString, undefined)
-    .js["NSFileType"].js !== "NSFileTypeDirectory"
+    .js["NSFileType"].js === "NSFileTypeDirectory"
 }
 
 function runCommand(...arguments) {
@@ -282,7 +349,17 @@ function run(argv) {
     "--search-path", $("~/Library").stringByExpandingTildeInPath.js)
     .split("\n")
     .slice(0, -1) // Remove last (empty) item
-    .sort(isNotDir)
+    .sort((a, b) =&gt; {
+      // Determine what is a directory or not
+      const isDirA = isDir(a)
+      const isDirB = isDir(b)
+
+      // If both are directories, sort by shortest tree so children are never before the parent
+      if (isDirA &amp;&amp; isDirB) return a.split("/").length - b.split("/").length
+
+      // Otherwise simply ensure directories are first
+      return isDirB - isDirA
+  })
 
   if (matchedPaths.length === 0) return noResults(searchQuery)
 
@@ -323,73 +400,6 @@ function run(argv) {
 			<string>D913927B-38F8-466C-8721-84BE0BE60388</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>function envVar(varName) {
-  return $.NSProcessInfo
-    .processInfo
-    .environment
-    .objectForKey(varName).js
-}
-
-function isNotDir(pathString) {
-  return $.NSFileManager.defaultManager
-    .attributesOfItemAtPathError(pathString, undefined)
-    .js["NSFileType"].js !== "NSFileTypeDirectory"
-}
-
-function run(argv) {
-  const deletedPaths = argv
-  const previousPaths = envVar("previous_paths").split("\n")
-
-  return deletedPaths.reduce((allPaths, currentPath) =&gt; {
-    // Remove deleted path
-    allPaths = allPaths.filter(path =&gt; path !== currentPath)
-    // Return early if not a directory
-    if (isNotDir(currentPath)) return allPaths
-    // Remove child paths
-    return allPaths.filter(path =&gt; !path.startsWith(`${currentPath}/`))
-  }, previousPaths).join("\n")
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>2CD62962-E471-429A-84C7-6945B4A31D06</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>show_list</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>7B6CBC76-42FB-4A69-A006-359A323156FB</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -467,23 +477,6 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>addfilestobuffer</key>
-				<true/>
-				<key>clearbuffer</key>
-				<false/>
-				<key>outputtype</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.buffer</string>
-			<key>uid</key>
-			<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>count</key>
 				<integer>1</integer>
 				<key>keychar</key>
@@ -499,6 +492,23 @@ function run(argv) {
 			<string>alfred.workflow.output.dispatchkeycombo</string>
 			<key>uid</key>
 			<string>F1342DD6-92FC-4D4A-B33A-8F5229D8FE51</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>addfilestobuffer</key>
+				<true/>
+				<key>clearbuffer</key>
+				<false/>
+				<key>outputtype</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.buffer</string>
+			<key>uid</key>
+			<string>0E6A83E9-2BAF-4F92-A788-D39A8D600109</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
