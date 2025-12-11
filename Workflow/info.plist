@@ -197,9 +197,9 @@
 }
 
 function isDir(pathString) {
-  return $.NSFileManager.defaultManager
-    .attributesOfItemAtPathError(pathString, undefined)
-    .js["NSFileType"].js === "NSFileTypeDirectory"
+  return $.NSURL.fileURLWithPath(pathString)
+    .resourceValuesForKeysError([$.NSURLIsDirectoryKey.js], undefined)
+    .js["NSURLIsDirectoryKey"].js
 }
 
 function run(argv) {
@@ -284,9 +284,9 @@ function run(argv) {
 }
 
 function isDir(pathString) {
-  return $.NSFileManager.defaultManager
-    .attributesOfItemAtPathError(pathString, undefined)
-    .js["NSFileType"].js === "NSFileTypeDirectory"
+  return $.NSURL.fileURLWithPath(pathString)
+    .resourceValuesForKeysError([$.NSURLIsDirectoryKey.js], undefined)
+    .js["NSURLIsDirectoryKey"].js
 }
 
 function runCommand(...arguments) {
